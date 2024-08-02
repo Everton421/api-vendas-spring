@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity(name = "prod_tabprecos")
 
@@ -13,7 +15,7 @@ public class PrecoProdutoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int TABELA;
 
-    private int PRODUTO;
+  
     private int PRECO;
     
     public int getTABELA() {
@@ -22,12 +24,7 @@ public class PrecoProdutoModel {
     public void setTABELA(int tABELA) {
         TABELA = tABELA;
     }
-    public int getPRODUTO() {
-        return PRODUTO;
-    }
-    public void setPRODUTO(int pRODUTO) {
-        PRODUTO = pRODUTO;
-    }
+  
     public int getPRECO() {
         return PRECO;
     }
